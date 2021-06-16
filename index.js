@@ -1,23 +1,26 @@
-// // Для каждого элемента li.item в списке ul#categories,
-// найдет и выведет в консоль текст заголовка элемента(тега h2)
-// и количество элементов в категории(всех вложенных в него
-//   элементов li).
+const ingredients = [
+  "Картошка",
+  "Грибы",
+  "Чеснок",
+  "Помидоры",
+  "Зелень",
+  "Приправы",
+];
 
-// Например для первой категории получится:
+const ingredientsRef = document.querySelector("#ingredients");
+console.log(ingredientsRef);
 
-// Категория: Животные
-// Количество элементов: 4
+function newMarkUp(options) {
+  return options.map((element) => {
+    console.log(element);
+    const item = document.createElement("li");
+    item.textContent = element;
+    item.style.color = "tomato";
+    item.style.fontSize = "20px";
 
-const categoriesRef = document.querySelector("#categories");
-console.log(categoriesRef.children.length);
+    return item;
+  });
+}
 
-const categoriesAmount = categoriesRef.children.length;
-console.log(`Quantity ${categoriesAmount}`);
-
-const itemRef = document.querySelectorAll(".item");
-console.log(itemRef);
-
-const itemArray = itemRef.forEach((e) => {
-  console.log(`Category ${e.firstElementChild.textContent}`),
-    console.log(`Quantity ${e.lastElementChild.children.length}`);
-});
+const createMarkUp = newMarkUp(ingredients);
+ingredientsRef.append(...createMarkUp);
