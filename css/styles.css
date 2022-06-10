@@ -1,0 +1,62 @@
+.container {
+  width: 1170px;
+
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+h1, h2, p {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.main-title {
+  margin-bottom: 20px;
+  text-align: center;
+  text-transform: uppercase;
+ }
+
+.item-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -30px;
+  margin-top: -30px;
+}
+
+.item-list > .item {
+  margin-left: 30px;
+  margin-top: 30px;
+
+  flex-basis: calc(100% / 3 - 30px);
+  border-radius: 4px;
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+  0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+  overflow: hidden;
+}
+
+.card-content {
+  padding: 15px;
+}
+
+.card-heading {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.main-link {
+  display: inline-block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
